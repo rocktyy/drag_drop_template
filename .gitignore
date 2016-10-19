@@ -1,0 +1,10 @@
+/node_modules/
+/rev/
+/web/
+/.idea/
+/.idea/workspace.xml
+**/*.xml
+/statics/styles/main.css.map
+/statics/styles/main.css
+/logs/
+

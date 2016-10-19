@@ -1,0 +1,59 @@
+/***
+@ 弹窗交易 买入黄金  页面样式
+**/
+
+@pop-des:#bfbfbf;
+.gold-trade-pop{
+  .pr();
+  //.px2rem(width,694);
+  width:100%;
+  background:#fff;
+  color:#333333;
+  .pr();
+  /**close**/
+  .trade-close-wrap { .pa(); right:0;.px2rem(width,80); .px2rem(height,80); z-index:200; }
+  .pop-close { .px2rem(width,27); .px2rem(height,28);
+      .pa(); .px2rem(top,28); .px2rem(right,28);
+    img { width:100%;}
+  }
+  .pop-top { .px2rem(padding-top,30); line-height:1; text-align:center;  }
+  /****title****/
+  .title { color:#fe434c; .px2px(font-size,34); }
+  .price { color:#fe434c; font-weight:bold; .px2px(font-size,60); .px2rem(margin-top,20);}
+  .des { .px2px(font-size,28); color:@pop-des; .px2rem(margin-top,12); }
+  /****content****/
+  .pop-content { .px2rem(margin-top,40); .px2rem(padding-left,38); .px2rem(padding-right,38);
+   li { .clearfix(); .px2rem(height,86); .px2rem(line-height,86); border:1px solid @border1;
+     .px2px(font-size,28);
+    .px2rem(padding-left,20); .px2rem(padding-right,20);
+     border-bottom:0;
+     &:last-child { border-bottom:1px solid @border1;}
+   }
+    .view-label { float:left; .px2rem(margin-right,38);}
+    .input { .px2rem(width,360); .px2px(font-size,28); border:0; outline:0;  color:#333333; }
+    .pop-unit{ float:right;}
+
+    //提示信息
+    .tip-info{
+      .px2rem(padding-left,20); .px2rem(padding-top,25);
+      .px2px(font-size,28);
+    }
+    .err-tip { color:#fe434c; display:none;}
+  }
+  //底部
+  .pop-footer{
+    .px2rem(margin-top,70);
+    text-align:center;
+    p { color:@pop-des; .px2rem(margin-bottom,20);}
+    .pop-trade-button { display:inline-block; width:100%; text-align:center; border:0;
+     .px2rem(height,100);
+      background:#fe434c;
+      .px2px(font-size,34); color:#fff;
+      &[disabled] { background:#ddd;}
+    }
+
+  }
+
+
+
+}

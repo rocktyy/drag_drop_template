@@ -1,0 +1,1541 @@
+@charset "utf-8";
+/****变量*******/
+/**浏览器重置样式***/
+html {
+  color: #000;
+  background: #fff;
+  overflow-y: scroll;
+  font-size: 37.5px;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  font-family: "Helvetica", '黑体';
+  line-height: 1.5;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  border: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:visited a:hover,
+a:active {
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+/* 去掉各 Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: 0;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,
+ul {
+  list-style: none;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+/* 来自 yahoo, 让标题都自定义, 适应多个系统应用 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 统一上标和下标 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 正常链接 未访问 */
+/* 鼠标悬停 */
+a:hover {
+  text-decoration: underline;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+}
+/*quick function*/
+.none {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+a.focus {
+  outline: 0;
+  text-decoration: none;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/***基础函数****/
+.number {
+  font-family: Helvetica, "黑体";
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.tac {
+  text-align: center;
+}
+/***pxtorem*****/
+/***rem转换方法****/
+/***pop*****/
+/*****/
+/*弹出样式*/
+.modal-open {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.show_window {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  -webkit-transition: all 0.6s;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.windowMask {
+  min-width: 8.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.5) center center no-repeat;
+}
+.show_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 100;
+}
+.show_modal .show_modal_body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  width: 100%;
+}
+/***question tip 问号提示****/
+.pop-risk-waring {
+  width: 7.70666667rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #fff6cd;
+  position: fixed;
+  z-index: 100;
+  line-height: 1;
+  padding-top: 0.50666667rem;
+  padding-bottom: 0.58666667rem;
+  padding-left: 0.37333333rem;
+  padding-right: 0.44rem;
+}
+.pop-risk-waring .source-title {
+  font-size: 15px;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+[data-dpr="2"] .pop-risk-waring .source-title {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .pop-risk-waring .source-title {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .pop-risk-waring .source-title {
+  font-size: 41px;
+}
+[data-dpr="3"] .pop-risk-waring .source-title {
+  font-size: 45px;
+}
+[data-dpr="4"] .pop-risk-waring .source-title {
+  font-size: 60px;
+}
+.pop-risk-waring .close {
+  width: 0.29333333rem;
+  float: right;
+}
+.pop-risk-waring .close img {
+  width: 100%;
+}
+.pop-risk-waring .content {
+  background: #fff6cd;
+  padding-top: 0.26666667rem;
+}
+.pop-risk-waring .content p {
+  font-size: 13px;
+  background: #fff6cd;
+  color: #5a5a5a;
+  line-height: 1.5;
+  margin-top: 0.08rem;
+}
+[data-dpr="2"] .pop-risk-waring .content p {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .pop-risk-waring .content p {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .pop-risk-waring .content p {
+  font-size: 36px;
+}
+[data-dpr="3"] .pop-risk-waring .content p {
+  font-size: 39px;
+}
+[data-dpr="4"] .pop-risk-waring .content p {
+  font-size: 52px;
+}
+.dialog_loading {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.dialog_loading img {
+  width: 100%;
+  height: 100%;
+}
+.tpl {
+  background-color: #f5f5f5 ;
+  line-height: normal;
+  background-color: #f5f5f5;
+  font-family: Helvetica, "黑体";
+}
+.tpl .en {
+  font-family: Helvetica, "黑体";
+}
+.tpl .gray {
+  color: #949494;
+}
+.tpl .finance {
+  background-color: #f5f5f5;
+}
+.tpl .finance-rate {
+  border-bottom: 1px #dcdcdc solid;
+  background-color: #fff;
+  padding-top: 1.04rem;
+  padding-bottom: 0.77333333rem;
+  margin-bottom: 0.32rem;
+}
+.tpl .finance-rate .expect-rate {
+  text-align: center;
+}
+.tpl .finance-rate .expect-rate .rate {
+  color: #ff6d39;
+  font-size: 45px;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate {
+  font-size: 90px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate {
+  font-size: 113px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate {
+  font-size: 124px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate {
+  font-size: 135px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate {
+  font-size: 180px;
+}
+.tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 45px;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 90px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 113px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 124px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 135px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate .rate-num {
+  font-size: 180px;
+}
+.tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 13px;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate .pec {
+  font-size: 52px;
+}
+.tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 30px;
+  vertical-align: 0.18666667rem;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 60px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 75px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 83px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 90px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate .plus {
+  font-size: 120px;
+}
+.tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 14px;
+  vertical-align: 0.66666667rem;
+  margin-left: -0.21333333rem;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 39px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 42px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate .sup-rate {
+  font-size: 56px;
+}
+.tpl .finance-rate .expect-rate .rate-tips {
+  margin-bottom: 1.33333333rem;
+  font-size: 13px;
+  color: #565656;
+}
+[data-dpr="2"] .tpl .finance-rate .expect-rate .rate-tips {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .expect-rate .rate-tips {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .expect-rate .rate-tips {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-rate .expect-rate .rate-tips {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-rate .expect-rate .rate-tips {
+  font-size: 52px;
+}
+.tpl .finance-rate .expect-rate .mid {
+  margin-left: 1.33333333rem;
+}
+.tpl .finance-rate .invest-info {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+.tpl .finance-rate .invest-info .invest-item {
+  text-align: center;
+  display: table-cell;
+}
+.tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 14px;
+  color: #565656;
+}
+[data-dpr="2"] .tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 39px;
+}
+[data-dpr="3"] .tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 42px;
+}
+[data-dpr="4"] .tpl .finance-rate .invest-info .invest-item .weight {
+  font-size: 56px;
+}
+.tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 20px;
+}
+[data-dpr="2"] .tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 40px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 50px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 55px;
+}
+[data-dpr="3"] .tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 60px;
+}
+[data-dpr="4"] .tpl .finance-rate .invest-info .invest-item .weight .num {
+  font-size: 80px;
+}
+.tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 13px;
+  padding-top: 0.21333333rem;
+  color: #aeaeae;
+}
+[data-dpr="2"] .tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-rate .invest-info .invest-item .title {
+  font-size: 52px;
+}
+.tpl .finance-rate .invest-info .invest-item.item1 {
+  border-left: 1px  #dcdcdc solid;
+  border-right: 1px #dcdcdc solid;
+}
+.tpl .finance-detail {
+  background-color: #fff;
+  border-bottom: 1px  #dcdcdc solid;
+}
+.tpl .finance-detail .tabnav {
+  display: table;
+  background-color: #fff;
+  width: 100%;
+}
+.tpl .finance-detail .tabnav .nav-content {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 1.09333333rem;
+  border-top: #dcdcdc 1px solid;
+  border-bottom: #dcdcdc 1px solid;
+}
+[data-dpr="2"] .tpl .finance-detail .tabnav .nav-content {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .tabnav .nav-content {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .tabnav .nav-content {
+  font-size: 41px;
+}
+[data-dpr="3"] .tpl .finance-detail .tabnav .nav-content {
+  font-size: 45px;
+}
+[data-dpr="4"] .tpl .finance-detail .tabnav .nav-content {
+  font-size: 60px;
+}
+.tpl .finance-detail .tabnav .nav1 {
+  border-right: #dcdcdc 1px solid;
+}
+.tpl .finance-detail .tabnav .active {
+  color: #ff6d39;
+  border-bottom: 3px solid;
+}
+.tpl .finance-detail .vux-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10000;
+  top: 0;
+}
+.tpl .finance-detail .vux-fixed {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+}
+.tpl .finance-detail .detail {
+  margin-top: 0.42666667rem;
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+.tpl .finance-detail .detail .detail-item {
+  padding-bottom: 0.93333333rem;
+}
+.tpl .finance-detail .detail .title {
+  height: 0.48rem;
+  color: #666666;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 0.48rem;
+  padding-left: 0.26666667rem;
+  margin-bottom: 0.56rem;
+  border-left: #ff6d39 5px solid;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .title {
+  font-size: 32px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .title {
+  font-size: 40px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .title {
+  font-size: 44px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .title {
+  font-size: 48px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .title {
+  font-size: 64px;
+}
+.tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 13px;
+  line-height: 0.61333333rem;
+  margin-bottom: 0.56rem;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .product-intro .product-info {
+  font-size: 52px;
+}
+.tpl .finance-detail .detail .product-intro .product-info:last-of-type {
+  margin-bottom: 0;
+}
+.tpl .finance-detail .detail .product-intro .product-intro-img {
+  margin-top: 0.93333333rem;
+  margin-bottom: 0.42666667rem;
+}
+.tpl .finance-detail .detail .product-intro .product-intro-img img {
+  width: 100%;
+  height: 5.33333333rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis {
+  border-bottom: #dcdcdc 1px solid;
+  padding-bottom: 0.45333333rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv {
+  text-align: center;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals {
+  text-align: center;
+  font-size: 0.17322667rem;
+  padding-bottom: 1.94666667rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .method {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 0.18666667rem;
+  text-align: center;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips {
+  position: absolute;
+  font-size: 0.31994667rem;
+  margin-top: 0.21333333rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips1 {
+  right: 50%;
+  transform: translateX(119%);
+  -ms-transform: translateX(119%);
+  -moz-transform: translateX(119%);
+  -webkit-transform: translateX(119%);
+  -o-transform: translateX(119%);
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips2 {
+  right: 0;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips .up {
+  position: absolute;
+  border-width: 8px;
+  border-style: dashed dashed solid dashed;
+  border-color: transparent transparent #fcf0d9 transparent;
+  top: -16px;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips1 .up {
+  left: 0.26656rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips2 .up {
+  right: 0.26656rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips2 .content {
+  background-color: #fcf0d9;
+  padding: 7px 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #d59a3d;
+  width: 1.86666667rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .tips1 .content {
+  background-color: #fcf0d9;
+  padding: 7px 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #d59a3d;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals ._title {
+  font-size: 0.34645333rem;
+  line-height: 0.93333333rem;
+  color: #949494;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals span {
+  font-size: 0.47973333rem;
+  color: #ff6d39;
+  display: inline-block;
+  margin: 0 3px;
+  position: relative;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals span font:first-child {
+  font-size: 0.90682667rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .priceDiv .totals .opt font {
+  font-size: 0.63989333rem;
+  color: #949494;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice {
+  display: table;
+  width: 100%;
+  border-top: #dcdcdc 1px solid;
+  border-bottom: #dcdcdc 1px solid;
+  padding: 0.53333333rem 0;
+  margin-bottom: 0.61333333rem;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice div {
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 18px;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 36px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 45px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 50px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 54px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price {
+  font-size: 72px;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  margin-top: 0;
+  font-size: 13px;
+  line-height: normal;
+  color: #bcbcbc;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .price .yuan {
+  font-size: 52px;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 12px;
+  margin-top: 0.53333333rem;
+  color: #bcbcbc;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 33px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 36px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .date {
+  font-size: 48px;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .bianhua {
+  margin-top: 2.5px;
+}
+.tpl .finance-detail .detail .earnings-calc .earnings-dis .auPrice .left {
+  border-right: #dcdcdc 1px solid;
+}
+.tpl .finance-detail .detail .earnings-calc .list-like {
+  color: #949494;
+}
+.tpl .finance-detail .detail .earnings-calc .intro {
+  margin-left: 0.34666667rem;
+  font-size: 13px;
+  line-height: 0.58666667rem;
+  position: relative;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .earnings-calc .intro {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .earnings-calc .intro {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .earnings-calc .intro {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .earnings-calc .intro {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .earnings-calc .intro {
+  font-size: 52px;
+}
+.tpl .finance-detail .detail .earnings-calc .list-like:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #dadada;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.26666667rem;
+  top: 0.2rem;
+}
+.tpl .finance-detail .detail .earnings-calc .list-spec:before {
+  content: "※";
+  position: absolute;
+  left: -0.33333333rem;
+}
+.tpl .finance-detail .detail .earnings-calc .exam {
+  margin-top: 0.56rem;
+  font-size: 15px;
+  line-height: 0.93333333rem;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .earnings-calc .exam {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .earnings-calc .exam {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .earnings-calc .exam {
+  font-size: 41px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .earnings-calc .exam {
+  font-size: 45px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .earnings-calc .exam {
+  font-size: 60px;
+}
+.tpl .finance-detail .detail .product-detail .detail-list li {
+  border-top: #dcdcdc 1px solid;
+}
+.tpl .finance-detail .detail .product-detail .detail-list li p {
+  display: table-cell;
+  font-size: 13px;
+  line-height: 1.04rem;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .product-detail .detail-list li p {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .product-detail .detail-list li p {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .product-detail .detail-list li p {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .product-detail .detail-list li p {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .product-detail .detail-list li p {
+  font-size: 52px;
+}
+.tpl .finance-detail .detail .product-detail .detail-list li p:first-child {
+  width: 3.22666667rem;
+  color: #949494;
+}
+.tpl .finance-detail .detail .product-detail .detail-list li:last-child {
+  border-bottom: #dcdcdc 1px solid;
+}
+.tpl .finance-detail .detail .bottom-line {
+  padding-bottom: 0.93333333rem;
+  border-bottom: 1px #dcdcdc solid;
+}
+.tpl .finance-detail .detail .super-elm {
+  font-size: 14px;
+  line-height: 0.61333333rem;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .super-elm {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .super-elm {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .super-elm {
+  font-size: 39px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .super-elm {
+  font-size: 42px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .super-elm {
+  font-size: 56px;
+}
+.tpl .finance-detail .detail .safe-and-call {
+  text-align: center;
+}
+.tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 13px;
+  color: #949494;
+  line-height: 23px;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .safe-and-call .safe {
+  font-size: 52px;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .safe-and-call .safe {
+  line-height: 46px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .safe-and-call .safe {
+  line-height: 58px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .safe-and-call .safe {
+  line-height: 63px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .safe-and-call .safe {
+  line-height: 69px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .safe-and-call .safe {
+  line-height: 92px;
+}
+.tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 12px;
+  line-height: 21px;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 24px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 30px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 33px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 36px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .safe-and-call .ask {
+  font-size: 48px;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .safe-and-call .ask {
+  line-height: 42px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .safe-and-call .ask {
+  line-height: 53px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .safe-and-call .ask {
+  line-height: 58px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .safe-and-call .ask {
+  line-height: 63px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .safe-and-call .ask {
+  line-height: 84px;
+}
+.tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 17px;
+  margin-top: 0.26666667rem;
+  color: #ff6d39;
+}
+[data-dpr="2"] .tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 34px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 43px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 47px;
+}
+[data-dpr="3"] .tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 51px;
+}
+[data-dpr="4"] .tpl .finance-detail .detail .safe-and-call .telephone {
+  font-size: 68px;
+}
+.tpl .finance-detail .add-space {
+  margin-top: 1.58rem!important;
+}
+.tpl .finance-detail .buy-user-list {
+  display: none;
+  margin: 0.42666667rem;
+}
+.tpl .finance-detail .buy-user-list .col {
+  color: #ff6d39;
+}
+.tpl .finance-detail .buy-user-list .buy-user-title {
+  text-align: center;
+  padding: 0.18666667rem 0;
+  margin-bottom: 0.56rem;
+}
+.tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 14px;
+}
+[data-dpr="2"] .tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 39px;
+}
+[data-dpr="3"] .tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 42px;
+}
+[data-dpr="4"] .tpl .finance-detail .buy-user-list .buy-user-title .title {
+  font-size: 56px;
+}
+.tpl .finance-detail .buy-user-list ul li {
+  font-size: 13px;
+  margin: 0.26666667rem 0;
+  color: #949494;
+  display: table;
+  width: 100%;
+}
+[data-dpr="2"] .tpl .finance-detail .buy-user-list ul li {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .finance-detail .buy-user-list ul li {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .finance-detail .buy-user-list ul li {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .finance-detail .buy-user-list ul li {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .finance-detail .buy-user-list ul li {
+  font-size: 52px;
+}
+.tpl .finance-detail .buy-user-list ul li p {
+  display: table-cell;
+  line-height: 0.64rem;
+}
+.tpl .finance-detail .buy-user-list ul li .mobile {
+  text-align: left;
+  width: 25%;
+}
+.tpl .finance-detail .buy-user-list ul li .buy-time {
+  text-align: center;
+  width: 50%;
+}
+.tpl .finance-detail .buy-user-list ul li .buy-money {
+  text-align: right;
+  width: 25%;
+}
+.tpl .finance-detail .buy-user-list #loading {
+  text-align: center;
+  color: #adadad;
+  font-size: 0.9285rem;
+  margin: 15px 0 20px 0;
+}
+.tpl .assurance {
+  text-align: center;
+  margin-top: 1.33333333rem;
+  padding-bottom: 3.46666667rem;
+}
+.tpl .assurance .checkHistory {
+  margin: 0 auto;
+  font-size: 13px;
+  color: #ff6d39;
+}
+[data-dpr="2"] .tpl .assurance .checkHistory {
+  font-size: 26px;
+}
+[data-dpr="2.5"] .tpl .assurance .checkHistory {
+  font-size: 33px;
+}
+[data-dpr="2.75"] .tpl .assurance .checkHistory {
+  font-size: 36px;
+}
+[data-dpr="3"] .tpl .assurance .checkHistory {
+  font-size: 39px;
+}
+[data-dpr="4"] .tpl .assurance .checkHistory {
+  font-size: 52px;
+}
+.tpl .assurance .checkHistory a {
+  color: inherit;
+  text-decoration: none;
+}
+.tpl .assurance .cic img {
+  display: inline-block;
+  height: 13px;
+}
+[data-dpr="2"] .tpl .assurance .cic img {
+  height: 26px;
+}
+[data-dpr="2.5"] .tpl .assurance .cic img {
+  height: 33px;
+}
+[data-dpr="2.75"] .tpl .assurance .cic img {
+  height: 36px;
+}
+[data-dpr="3"] .tpl .assurance .cic img {
+  height: 39px;
+}
+[data-dpr="4"] .tpl .assurance .cic img {
+  height: 52px;
+}
+.tpl .assurance .cic p {
+  padding-top: 7px;
+  display: inline-block;
+  height: 13px;
+  color: #949494;
+}
+[data-dpr="2"] .tpl .assurance .cic p {
+  padding-top: 14px;
+}
+[data-dpr="2.5"] .tpl .assurance .cic p {
+  padding-top: 18px;
+}
+[data-dpr="2.75"] .tpl .assurance .cic p {
+  padding-top: 19px;
+}
+[data-dpr="3"] .tpl .assurance .cic p {
+  padding-top: 21px;
+}
+[data-dpr="4"] .tpl .assurance .cic p {
+  padding-top: 28px;
+}
+[data-dpr="2"] .tpl .assurance .cic p {
+  height: 26px;
+}
+[data-dpr="2.5"] .tpl .assurance .cic p {
+  height: 33px;
+}
+[data-dpr="2.75"] .tpl .assurance .cic p {
+  height: 36px;
+}
+[data-dpr="3"] .tpl .assurance .cic p {
+  height: 39px;
+}
+[data-dpr="4"] .tpl .assurance .cic p {
+  height: 52px;
+}
+.tpl footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 0.4rem;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 12px 2px rgba(164, 152, 132, 0.2);
+  -moz-box-shadow: 0 0 12px 2px rgba(164, 152, 132, 0.2);
+  box-shadow: 0 0 12px 2px rgba(164, 152, 132, 0.2);
+}
+.tpl footer .total .saled {
+  width: 1%;
+  height: 3px;
+  background-color: #ffa210;
+}
+[data-dpr="2"] .tpl footer .total .saled {
+  height: 5px;
+}
+[data-dpr="2.5"] .tpl footer .total .saled {
+  height: 6px;
+}
+[data-dpr="2.75"] .tpl footer .total .saled {
+  height: 7px;
+}
+[data-dpr="3"] .tpl footer .total .saled {
+  height: 8px;
+}
+[data-dpr="4"] .tpl footer .total .saled {
+  height: 10px;
+}
+.tpl footer .hasSaled {
+  margin-top: 0.33333333rem;
+  margin-bottom: 0.56rem;
+  text-align: center;
+  font-size: 15px;
+  color: #797979;
+}
+[data-dpr="2"] .tpl footer .hasSaled {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .tpl footer .hasSaled {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .tpl footer .hasSaled {
+  font-size: 41px;
+}
+[data-dpr="3"] .tpl footer .hasSaled {
+  font-size: 45px;
+}
+[data-dpr="4"] .tpl footer .hasSaled {
+  font-size: 60px;
+}
+.tpl footer .hasSaled .col {
+  color: #ffa210;
+}
+.tpl footer .buyBtn {
+  margin: 0 auto;
+  text-align: center;
+}
+.tpl footer .buyBtn button {
+  outline: none;
+  font-size: 18px;
+  height: 1.12rem;
+  line-height: 1.12rem;
+  width: 84%;
+  color: #fff;
+  border-radius: 5px;
+  border: 0px none transparent;
+}
+[data-dpr="2"] .tpl footer .buyBtn button {
+  font-size: 36px;
+}
+[data-dpr="2.5"] .tpl footer .buyBtn button {
+  font-size: 45px;
+}
+[data-dpr="2.75"] .tpl footer .buyBtn button {
+  font-size: 50px;
+}
+[data-dpr="3"] .tpl footer .buyBtn button {
+  font-size: 54px;
+}
+[data-dpr="4"] .tpl footer .buyBtn button {
+  font-size: 72px;
+}
+.tpl footer .buyBtn .canBuy {
+  background-color: #fd753d;
+}
+.tpl footer .buyBtn .saledOut {
+  background-color: #c5c5c5;
+}

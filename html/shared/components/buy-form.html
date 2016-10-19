@@ -1,0 +1,21 @@
+
+<form id="buy-form" action="<%=basePath%>/trade/gold/confirm" method="post" style="display:none;">
+</form>
+ <script id="buyform-template" type="text/x-handlebars-template">
+         <input type="hidden" class="type" name="type" value="{{type}}" />  
+         <input type="hidden" class="orderNo" name="orderNo" value="{{orderNo}}" />
+         <input type="hidden" class="buyWeight" name="buyWeight" value="{{buyWeight}}" /> 
+         <input type="hidden" class="currentPrice" name="currentPrice" value="{{currentPrice}}" />
+         <input type="hidden" class="realMoney" name="realMoney" value="{{realMoney}}" /> 
+         <input type="hidden" class="totalMoney" name="totalMoney" value="{{totalMoney}}" />
+         <input type="hidden" class="createTime" name="createTime" value="{{createTime}}" />
+         {{# if _depositType}}
+          <input type="hidden" class="interestStart" name="interestStart" value="{{interestStart}}" />
+         <input type="hidden" class="interestEnd" name="interestEnd" value="{{interestEnd}}" /> 
+          {{else}}
+          <input type="hidden" class="interestStart" name="interestStart" value="{{estimateInterestDate}}" />
+         {{/if}}        
+         <input type="hidden" class="depositType" name="depositType" value="{{depositType}}" />
+         <input type="hidden" class="gramInput"  name="gramInput" value="{{gramInput}}" />
+         <input type="hidden" class="valueInput" name="valueInput" value="{{valueInput}}" /> 
+    </script>

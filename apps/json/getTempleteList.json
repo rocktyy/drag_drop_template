@@ -1,0 +1,12 @@
+{
+  "data":{
+  	"tplList" :[{
+  		"html":"%3Cstyle%3Ebody%7B%20background-color%3A%20%23fd753d%3B%20%7D%3C/style%3E%3Cdiv%20class%3D%22tabnav%20nav-sticky%22%20id%3D%22nav-wapper%22%3E%3Cdiv%20class%3D%22nav-content%20nav1%20active%22%3E%3Cdiv%20class%3D%22nav-title%22%3E%u8BE6%u60C5%u4FE1%u606F%3C/div%3E%3C/div%3E%3Cdiv%20class%3D%22nav-content%20nav2%22%3E%3Cdiv%20class%3D%22nav-title%22%3E%u8D2D%u4E70%u4EBA%u6570%28%3Cspan%20class%3D%22buy-user-num%20en%22%3E--%3C/span%3E%u4F4D%29%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class%3D%22detail%20nav-body%22%3E%3Cdiv%20id%3D%22insertContent%22%3E%3C/div%3E%3Cdiv%20class%3D%22safe-and-call%20detail-item%22%3E%3Cp%20class%3D%22safe%22%3E%u5E02%u573A%u6709%u98CE%u9669%uFF0C%u6295%u8D44%u9700%u8C28%u614E%3C/p%3E%3Cp%20class%3D%22ask%22%3E%u82E5%u6709%u7591%u95EE%uFF0C%u8BF7%u62E8%u6253%u5BA2%u670D%u7535%u8BDD%3C/p%3E%3Cp%20class%3D%22telephone%22%3E%3Cspan%20class%3D%22en%22%3E4000-339-993%3C/span%3E%3C/p%3E%3C/div%3E%3C/div%3E%3Cdiv%20class%3D%22buy-user-list%20nav-body%22%3E%3Cdiv%20class%3D%22buy-user-title%22%3E%3Cp%20class%3D%22title%22%3E%u5DF2%u6709%3Cspan%20class%3D%22col%22%3E%3Cspan%20class%3D%22buy-user-num%20en%22%3E--%3C/span%3E%u4F4D%3C/span%3E%u7528%u6237%u6295%u8D44%u672C%u4EA7%u54C1%3Cspan%20class%3D%22col%22%3E%3Cspan%20class%3D%22total-money%20en%22%3E--%3C/span%3E%u4E07%3C/span%3E%u5143%3C/p%3E%3C/div%3E%3Cdiv%20class%3D%22user-list%22%3E%3Cul%20id%3D%22user-list-detail%22%3E%3Cli%20class%3D%22en%22%3E%3C/li%3E%3C/ul%3E%3Cdiv%20id%3D%22loading%22%20style%3D%22display%3A%20none%3B%22%3E%u6B63%u5728%u52A0%u8F7D...%3C/div%3E%3C/div%3E%3C/footer%3E%3C/div%3E%3C/div%3E"
+  		}] 
+  },
+  "serverTime":1472009471271,
+  "code":"0000",
+  "msg":"操作成功"
+} 
+ 
+ 

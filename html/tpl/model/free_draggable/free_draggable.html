@@ -1,0 +1,27 @@
+﻿<link rel="stylesheet" href="jquery-ui.min.css">
+<script src="jquery.js"></script>
+<script src="jquery-ui.min.js"></script> 
+<style>
+  .draggable { width: 150px; height: 150px; padding: 0.5em; border:1px solid #444444}
+  .div1{background: #ff0000;}
+  .div2{background: #00ff00;}
+</style>
+<script>
+  $(function() {
+		$( ".draggable" ).draggable();
+	    $( ".draggable" ).resizable({
+		  handles: "se"
+		});
+  });
+</script>
+</head>
+<body>
+<div class="draggable div1">
+  <p>请拖动我1!</p>
+</div>
+ 
+<div class="draggable div2">
+  <p>请拖动我2!</p>
+</div>
+
+		
