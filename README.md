@@ -2,4 +2,6 @@
  
 拖拽试生成布局，使用微信h5模板页面
 
+npm install 
+node bin/www
 
